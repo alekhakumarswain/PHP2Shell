@@ -307,8 +307,10 @@ To secure systems against this vulnerability class, implement the following defe
 
 ## 7. Deep-Dive References & Technical Playbooks
 
-For advanced technical details, incident response guides, and WAF rules:
+For advanced technical details, incident response guides, WAF rules, and remediation checklists:
 * 📘 **[docs/ARCHITECTURE_DEEP_DIVE.md](./docs/ARCHITECTURE_DEEP_DIVE.md):** Zend Memory Manager internals, small/large bins, bailout longjmp mechanics, and C-level code analysis.
 * 🛡️ **[docs/WAF_AND_HARDENING_GUIDE.md](./docs/WAF_AND_HARDENING_GUIDE.md):** ModSecurity / OWASP Core Rule Set (CRS) filtering rules, Nginx/Apache reverse proxy configurations, and runtime hardening.
 * 🔍 **[docs/INCIDENT_RESPONSE_GUIDE.md](./docs/INCIDENT_RESPONSE_GUIDE.md):** Log forensics, grep signatures for pre-RINIT crashes (`Unknown on line 0`), and GDB core dump stack analysis.
+* ✅ **[docs/REMEDIATION_AND_SELF_AUDIT_GUIDE.md](./docs/REMEDIATION_AND_SELF_AUDIT_GUIDE.md):** Comprehensive self-assessment checklist, `php.ini` hardening, worker recycling benchmarks, and automated `self_audit.py` usage.
+
 
