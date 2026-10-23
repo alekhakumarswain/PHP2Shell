@@ -37,6 +37,10 @@ In October 2026, the PHP development team issued emergency releases across all s
 
 This repository provides two self-contained, containerized target environments, diagnostic audit tooling, and an end-to-end browser automation suite to analyze these mechanisms defensively.
 
+<p align="center">
+  <img src="./assets/php2shell-rce-flow.webp" alt="PHP2SHELL Remote Code Execution on Target Applications" width="900">
+</p>
+
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                          HTTP CLIENT REQUEST                                │
@@ -131,6 +135,10 @@ In unpatched PHP, if a request triggered early session handling (such as `sessio
      ├── 2. Engine accesses global pointer PS(id) before re-initialization.
      └── 3. USE-AFTER-FREE: PS(id) points to dead/reallocated memory.
 ```
+
+<p align="center">
+  <img src="./assets/php2shell-memory-disclosure.webp" alt="PHP2SHELL Remote Memory Disclosure" width="900">
+</p>
 
 ### Upstream Patch Analysis
 In the patched releases (8.4.27+ and 8.5.12+):
