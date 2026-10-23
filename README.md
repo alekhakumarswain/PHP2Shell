@@ -294,3 +294,13 @@ To secure systems against this vulnerability class, implement the following defe
 
 5. **Worker Recycling:**
    In Apache MPM Prefork, set `MaxConnectionsPerChild` (e.g., `1000`) or in PHP-FPM set `pm.max_requests` to periodically recycle persistent worker processes, clearing accumulated heap state.
+
+---
+
+## 7. Deep-Dive References & Technical Playbooks
+
+For advanced technical details, incident response guides, and WAF rules:
+* 📘 **[docs/ARCHITECTURE_DEEP_DIVE.md](./docs/ARCHITECTURE_DEEP_DIVE.md):** Zend Memory Manager internals, small/large bins, bailout longjmp mechanics, and C-level code analysis.
+* 🛡️ **[docs/WAF_AND_HARDENING_GUIDE.md](./docs/WAF_AND_HARDENING_GUIDE.md):** ModSecurity / OWASP Core Rule Set (CRS) filtering rules, Nginx/Apache reverse proxy configurations, and runtime hardening.
+* 🔍 **[docs/INCIDENT_RESPONSE_GUIDE.md](./docs/INCIDENT_RESPONSE_GUIDE.md):** Log forensics, grep signatures for pre-RINIT crashes (`Unknown on line 0`), and GDB core dump stack analysis.
+
